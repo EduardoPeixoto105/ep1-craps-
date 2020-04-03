@@ -50,4 +50,70 @@ while continuar and come_out and fichas>0:
                         come_out=False
                         continuar=False
                         break
+    if aposta == 'Field':
+        valor= int(input('Quanto você deseja apostar?'))
+        if dados==5 or dados==6 or dados==7 or dados==8:
+            print('Você perdeu!')
+            continuar=False
+            come_out=False
+        elif dados==3 or dados== 4 or dados== 9 or dados== 10 or dados== 11:
+            fichas= fichas + valor
+            print('Você ganhou {} fichas!'.format(valor))
+            sair=input('Você deseja continuar? [S/N]')
+            if sair == 'N':
+                print('Você está fora!')
+                print('Você saiu com {} fichas'.format(fichas))
+                continuar=False
+        elif dados==2:
+            fichas= fichas + (valor*2)
+            print('Você ganhou {}  fichas!'.format(valor))
+            sair=input('Você deseja continuar? [S/N]')
+            if sair == 'N':
+                print('Você está fora!')
+                print('Você saiu com {} fichas'.format(fichas))
+                continuar=False
+        else:
+            fichas= fichas + (valor*3)
+            print('Você ganhou {} fichas!'.format(valor))
+            sair=input('Você deseja continuar? [S/N]')
+            if sair == 'N':
+                print('Você está fora!')
+                print('Você saiu com {} fichas'.format(fichas))
+                continuar=False
+    if aposta== 'Any Craps':
+        valor= int(input('Quanto você deseja apostar?'))
+        if dados == 3 or dados == 2 or dados == 12:
+            fichas= fichas + (valor*7)
+            print('Você ganhou {} fichas!'.format(valor))
+            sair=input('Você deseja continuar? [S/N]')
+            if sair == 'N':
+                print('Você está fora!')
+                print('Você saiu com {} fichas'.format(fichas))
+                continuar=False
+        else:
+            fichas= fichas - valor
+            print('Você perdeu {} fichas!'.format(valor))
+            sair=input('Você deseja continuar? [S/N]')
+            if sair == 'N':
+                print('Você está fora!')
+                print('Você saiu com {} fichas'.format(fichas))
+                continuar=False
+    if aposta== 'Twelve':
+        valor= int(input('Quanto você deseja apostar?'))
+        if dados== 12:
+            fichas= fichas + (valor*30)
+            print('Você ganhou {} fichas!'.format(valor))
+            sair=input('Você deseja continuar? [S/N]')
+            if sair == 'N':
+                print('Você está fora!')
+                print('Você saiu com {} fichas'.format(fichas))
+                continuar=False
+        else:
+            fichas= fichas - valor
+            print('Você perdeu {} fichas!'.format(valor))
+            sair=input('Você deseja continuar? [S/N]')
+            if sair == 'N':
+                print('Você está fora!')
+                print('Você saiu com {} fichas'.format(fichas))
+                continuar=False                    
   
